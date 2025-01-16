@@ -6,7 +6,7 @@
 
     <groupId>com.brihaspathee.sapphire</groupId>
     <artifactId>sapphire-library</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>sapphire-library</name>
     <description>Common Classes for all Sapphire Microservices</description>
@@ -47,6 +47,18 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.36</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+            <version>4.4.16</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>6.2.1</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
