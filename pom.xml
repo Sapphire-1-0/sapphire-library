@@ -6,7 +6,7 @@
 
     <groupId>com.brihaspathee.sapphire</groupId>
     <artifactId>sapphire-library</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
     <name>sapphire-library</name>
     <description>Common Classes for all Sapphire Microservices</description>
