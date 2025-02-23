@@ -52,6 +52,39 @@ public class UserDto {
     private String password;
 
     /**
+     * Represents the service identifier assigned to the user.
+     *
+     * This variable is a unique identifier used to associate a user with a specific service within the application.
+     *
+     * Attributes:
+     * - Required: True
+     * - Access Mode: Read/Write
+     * - Example Value: "SP223806", "MMS-SERVICE"
+     */
+    @JsonProperty(required = true)
+    @Schema(description = "The service id of the user",
+            example = "SP223806", requiredMode = Schema.RequiredMode.REQUIRED,
+            accessMode = Schema.AccessMode.READ_WRITE)
+    private String serviceId;
+
+    /**
+     * Represents the type of account associated with the user.
+     *
+     * This variable defines the role or category of the user's account within the application.
+     * For example, it can specify whether the user is an admin, a regular user, or another type of account.
+     *
+     * Attributes:
+     * - Required: True
+     * - Access Mode: Read/Write
+     * - Example Values: "user", "service"
+     */
+    @JsonProperty(required = true)
+    @Schema(description = "The type of account of the user",
+            example = "user", requiredMode = Schema.RequiredMode.REQUIRED,
+            accessMode = Schema.AccessMode.READ_WRITE)
+    private String accountType;
+
+    /**
      * The roles associated with the user
      */
     @JsonProperty(required = true)
@@ -68,6 +101,8 @@ public class UserDto {
                 "userId=" + userId +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
+                ", serviceId='" + serviceId + '\'' +
+                ", accountType='" + accountType + '\'' +
                 ", roles=" + roles +
                 '}';
     }
