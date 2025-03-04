@@ -62,7 +62,7 @@ public class DomainRegistrationRequest {
      * includes a description.
      */
     @JsonProperty(required = true)
-    @Schema(description = "A short description of the domain",
+    @Schema(description = "A short description of the domain. This is typically a microservice",
             example = "Contains resources of member accounts", requiredMode = Schema.RequiredMode.REQUIRED,
             accessMode = Schema.AccessMode.READ_WRITE)
     @NotNull
