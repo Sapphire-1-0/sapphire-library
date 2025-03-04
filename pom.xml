@@ -6,7 +6,7 @@
 
     <groupId>com.brihaspathee.sapphire</groupId>
     <artifactId>sapphire-library</artifactId>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.3</version>
     <packaging>jar</packaging>
     <name>sapphire-library</name>
     <description>Common Classes for all Sapphire Microservices</description>
@@ -24,6 +24,14 @@
             <url>http://www.opensource.org/licenses/mit-license.php</url>
         </license>
     </licenses>
+
+    <scm>
+        <connection>scm:git:git://github.com/Sapphire-1-0/sapphire-library.git</connection>
+        <!--        <developerConnection>scm:git:ssh://github.com:Zeus-2-0/zeus-library.git</developerConnection>-->
+        <developerConnection>scm:git:git@github.com:Sapphire-1-0/sapphire-library.git</developerConnection>
+        <url>scm:git:http://github.com/Sapphire-1-0/sapphire-library</url>
+        <tag>sapphire-library</tag>
+    </scm>
 
     <developers>
         <developer>
