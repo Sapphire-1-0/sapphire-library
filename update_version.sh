@@ -28,7 +28,7 @@ increment_version() {
     echo "$major.$minor.$patch-SNAPSHOT"
 }
 
-# Extract the version below <artifactId>member-management</artifactId>
+# Extract the version below <artifactId>sapphire-library</artifactId>
 CURRENT_VERSION=$(awk '
     /<artifactId>sapphire-library<\/artifactId>/ { found=1 }
     found && /<version>/ {
@@ -41,7 +41,7 @@ CURRENT_VERSION=$(awk '
 
 # Check if version is found
 if [[ -z "$CURRENT_VERSION" ]]; then
-    echo "Error: Unable to find <version> tag for <artifactId>member-management</artifactId> in pom.xml"
+    echo "Error: Unable to find <version> tag for <artifactId>sapphire-library</artifactId> in pom.xml"
     exit 1
 fi
 
@@ -57,7 +57,7 @@ fi
 # Get the new version with -SNAPSHOT
 NEW_VERSION=$(increment_version "$CURRENT_VERSION" "$INCREMENT_TYPE")
 
-# Update only the version below <artifactId>member-management</artifactId>
+# Update only the version below <artifactId>sapphire-library</artifactId>
 awk -v new_version="$NEW_VERSION" '
     /<artifactId>sapphire-library<\/artifactId>/ { found=1 }
     found && /<version>/ && !updated {
